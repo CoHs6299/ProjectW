@@ -9,6 +9,12 @@ void setup()
 {
   Serial.begin(115200);
   setup_wifi();
+  setup_awsiot();
+  connect();
+  if (connect())
+  {
+    Serial.print("OK");
+  }
 }
 
 void loop()
