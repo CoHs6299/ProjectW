@@ -1,13 +1,17 @@
 #include <Arduino.h>
+#include <ESP8266WiFi.h>
+#include <ESP8266WiFiMulti.h>
+#include <ESP8266HTTPClient.h>
+#include "config.h"
+#include "awsiot.h"
 
-void setup() {
-  pinMode(6, HIGH);
-  Serial.begin(9600);
+void setup()
+{
+  Serial.begin(115200);
+  setup_wifi();
 }
 
-void loop() {
-  for (size_t i = 0; i < 5; i++) {
-    pinMode(6, LOW);
-    delay(6);
-  }
+void loop()
+{
+
 }
